@@ -2,21 +2,42 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 public class Player : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 5f;
     Vector2 rawInput;
+
+    Vector2 minBounds;
+    Vector2 maxBounds;
+
+    void Start() {
+        InitBounds();
+    }
     
     void Update()
     {
         Move();
     }
 
+    void InitBounds()
+    {
+        Camera mainCamera = Camera.main;
+        minBounds = mainCamera.ViewportToWorldPoint(new Vector2(0,0));
+        maxBounds = mainCamera.ViewportToWorldPoint(new Vector2(1,1));
+    }
     void Move()
     {
-        Vector3 delta = rawInput * moveSpeed * Time.deltaTime;
-        transform.position += delta;
+        //Vector3 delta = rawInput * moveSpeed * Time.deltaTime;
+        Vector2 delta = rawInput * moveSpeed * Time.deltaTime;
+
+        Vector2 newPosition = new Vector2();
+        newPosition.x = Mathf.Clamp(transform.position.x + delta.x, minBounds.x, maxBounds.x);
+        newPosition.y = Mathf.Clamp(transform.position.y + delta.y, minBounds.y, maxBounds.y);
+        
+        //transform.position += delta;
+        transform.position = newPosition;
     }
     void OnMove(InputValue value)
     {
