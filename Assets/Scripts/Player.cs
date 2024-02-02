@@ -9,6 +9,10 @@ public class Player : MonoBehaviour
     [SerializeField] float moveSpeed = 5f;
     Vector2 rawInput;
 
+    [SerializeField] float paddingLeft;
+    [SerializeField] float paddingRight;
+    [SerializeField] float paddingTop;
+    [SerializeField] float paddingBottom;
     Vector2 minBounds;
     Vector2 maxBounds;
 
@@ -33,8 +37,8 @@ public class Player : MonoBehaviour
         Vector2 delta = rawInput * moveSpeed * Time.deltaTime;
 
         Vector2 newPosition = new Vector2();
-        newPosition.x = Mathf.Clamp(transform.position.x + delta.x, minBounds.x, maxBounds.x);
-        newPosition.y = Mathf.Clamp(transform.position.y + delta.y, minBounds.y, maxBounds.y);
+        newPosition.x = Mathf.Clamp(transform.position.x + delta.x, minBounds.x + paddingLeft, maxBounds.x + paddingRight);
+        newPosition.y = Mathf.Clamp(transform.position.y + delta.y, minBounds.y + paddingBottom, maxBounds.y + paddingTop);
         
         //transform.position += delta;
         transform.position = newPosition;

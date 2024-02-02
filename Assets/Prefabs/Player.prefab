@@ -70,7 +70,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1677226581
+  m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 4002712036758603063, guid: 0d8919a0c5c64864ca50d9c04eba3137, type: 3}
@@ -94,6 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3784259569248370659}
   - component: {fileID: -5224382288688969038}
+  - component: {fileID: 8044467348403938205}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -147,3 +148,20 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &8044467348403938205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6794389579132497880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94569b9d0363dea4a8338af38f30963e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  paddingLeft: 0.5
+  paddingRight: -0.5
+  paddingTop: 0
+  paddingBottom: 0
