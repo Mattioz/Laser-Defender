@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6450550579160485287}
   - component: {fileID: 26979290025175668}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: spaceShips_003_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 4002712036758603063, guid: 0d8919a0c5c64864ca50d9c04eba3137, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -98,9 +98,9 @@ GameObject:
   - component: {fileID: -2326296803212763717}
   - component: {fileID: 8766116057208765220}
   - component: {fileID: -2177899067607354833}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Player
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -243,3 +243,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59b8736328ad56a40b7459ed1ddd6bea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 50
