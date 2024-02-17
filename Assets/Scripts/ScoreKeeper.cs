@@ -6,7 +6,7 @@ public class ScoreKeeper : MonoBehaviour
 {
     int score;
 
-    public static ScoreKeeper instance;
+    static ScoreKeeper instance;
 
     void Awake() 
     {
