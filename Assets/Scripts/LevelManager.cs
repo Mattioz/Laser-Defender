@@ -19,7 +19,6 @@ public class LevelManager : MonoBehaviour
         {
             scoreKeeper.ResetScore();
         }
-        
         SceneManager.LoadScene("Gameplay");
     }    
 
